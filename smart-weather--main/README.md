@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Smart Weather Forecasting Web Application
 
 A modern, full-stack weather forecasting application built with **React** and **Bootstrap**. Get real-time weather information with a beautiful, responsive interface featuring dark/light themes and automatic search history tracking.
@@ -349,5 +349,4 @@ cd frontend && npm test  # Frontend tests
 - Icons from [React Icons](https://react-icons.github.io/react-icons/)
 - Styling framework: [Bootstrap 5](https://getbootstrap.com/)
 =======
-# smart-weather-
->>>>>>> 51690cfe2c159225b308c027c2b5fe1008a13c8f
+
