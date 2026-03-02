@@ -1,0 +1,196 @@
+.forecast-card {
+  background: var(--bg-card) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.forecast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.forecast-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.forecast-title svg {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.forecast-day-col {
+  display: flex;
+}
+
+.forecast-day {
+  flex: 1;
+  padding: 1.25rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.forecast-day:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+  border-color: var(--accent);
+}
+
+.forecast-day-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.forecast-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.forecast-icon {
+  font-size: 3.5rem;
+  color: var(--accent);
+  margin: 0.5rem 0;
+}
+
+.forecast-temp {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0.5rem 0;
+}
+
+.temp-max {
+  color: var(--text-primary);
+}
+
+.temp-separator {
+  color: var(--text-secondary);
+  margin: 0 0.25rem;
+}
+
+.temp-min {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.forecast-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forecast-details {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.forecast-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.forecast-detail svg {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.forecast-rain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.forecast-rain svg {
+  font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .forecast-day-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .forecast-day-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .forecast-day {
+    padding: 1rem;
+  }
+  
+  .forecast-icon {
+    font-size: 3rem;
+  }
+  
+  .forecast-temp {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .forecast-title {
+    font-size: 1.25rem;
+  }
+  
+  .forecast-day {
+    padding: 0.875rem;
+  }
+  
+  .forecast-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

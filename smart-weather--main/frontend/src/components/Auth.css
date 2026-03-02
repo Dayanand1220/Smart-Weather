@@ -1,0 +1,450 @@
+/* Auth Container - Matches main app background */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Theme Toggle Button on Auth Pages */
+.theme-toggle-auth {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-auth:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Brand Styling */
+.auth-brand {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.brand-icon-large {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.brand-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Floating Weather Emojis */
+.weather-emoji {
+  position: fixed;
+  font-size: 2.5rem;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.weather-emoji-1 {
+  top: 10%;
+  left: 10%;
+  animation: float-1 8s infinite;
+}
+
+.weather-emoji-2 {
+  top: 20%;
+  right: 15%;
+  animation: float-2 10s infinite;
+}
+
+.weather-emoji-3 {
+  top: 60%;
+  left: 8%;
+  animation: float-3 12s infinite;
+}
+
+.weather-emoji-4 {
+  bottom: 15%;
+  right: 10%;
+  animation: float-4 9s infinite;
+}
+
+.weather-emoji-5 {
+  top: 40%;
+  right: 5%;
+  animation: float-5 11s infinite;
+}
+
+.weather-emoji-6 {
+  bottom: 25%;
+  left: 12%;
+  animation: float-6 13s infinite;
+}
+
+.weather-emoji-7 {
+  top: 75%;
+  right: 20%;
+  animation: float-7 10s infinite;
+}
+
+.weather-emoji-8 {
+  top: 30%;
+  left: 5%;
+  animation: float-8 14s infinite;
+}
+
+/* Float Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -15px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-5px, -25px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-10px, -15px) rotate(3deg);
+  }
+}
+
+@keyframes float-2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(-15px, 20px) rotate(-8deg);
+  }
+  66% {
+    transform: translate(10px, -10px) rotate(8deg);
+  }
+}
+
+@keyframes float-3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(15px, -20px) scale(1.1);
+  }
+}
+
+@keyframes float-4 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-12px, -18px) rotate(-6deg);
+  }
+  50% {
+    transform: translate(8px, -30px) rotate(6deg);
+  }
+  75% {
+    transform: translate(12px, -18px) rotate(-4deg);
+  }
+}
+
+@keyframes float-5 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, 15px);
+  }
+}
+
+@keyframes float-6 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(18px, -12px) rotate(10deg);
+  }
+  66% {
+    transform: translate(-8px, 12px) rotate(-10deg);
+  }
+}
+
+@keyframes float-7 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-15px, -25px) scale(0.9);
+  }
+}
+
+@keyframes float-8 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, 20px) rotate(7deg);
+  }
+  50% {
+    transform: translate(-10px, -15px) rotate(-7deg);
+  }
+  75% {
+    transform: translate(15px, 10px) rotate(5deg);
+  }
+}
+
+/* Auth Card - Glassmorphism style matching main app */
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  background: var(--bg-card) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.auth-card .card-body {
+  padding: 2.5rem;
+}
+
+/* Headings - Using Poppins font like main app */
+.auth-card h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form Labels */
+.auth-card .form-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Form Controls - Matching main app style */
+.auth-card .form-control,
+.auth-card .form-select {
+  font-family: 'Inter', sans-serif;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.auth-card .form-control:focus,
+.auth-card .form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  outline: none;
+}
+
+.auth-card .form-control::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Buttons - Matching main app premium style */
+.auth-card .btn-primary {
+  font-family: 'Inter', sans-serif;
+  padding: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.auth-card .btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, var(--accent-hover) 0%, var(--accent) 100%);
+}
+
+.auth-card .btn-primary:active {
+  transform: translateY(0);
+}
+
+.auth-card .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.auth-card .btn-link {
+  font-family: 'Inter', sans-serif;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.auth-card .btn-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Links */
+.auth-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.auth-card a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Alerts - Matching main app style */
+.auth-card .alert {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  font-family: 'Inter', sans-serif;
+}
+
+.auth-card .alert-danger {
+  background: rgba(245, 101, 101, 0.1);
+  color: var(--text-primary);
+  border-color: rgba(245, 101, 101, 0.3);
+}
+
+.auth-card .alert-info {
+  background: rgba(102, 126, 234, 0.1);
+  color: var(--text-primary);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.auth-card .alert-success {
+  background: rgba(72, 187, 120, 0.1);
+  color: var(--text-primary);
+  border-color: rgba(72, 187, 120, 0.3);
+}
+
+/* Text Muted */
+.auth-card .text-muted {
+  color: var(--text-secondary) !important;
+  font-size: 0.875rem;
+}
+
+/* Divider */
+.auth-card hr {
+  border-color: var(--border-color);
+  opacity: 0.5;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .weather-emoji {
+    font-size: 2rem;
+    opacity: 0.1;
+  }
+  
+  .brand-icon-large {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .auth-card .card-body {
+    padding: 2rem 1.5rem;
+  }
+  
+  .auth-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .brand-name {
+    font-size: 2rem;
+  }
+  
+  .brand-icon-large {
+    font-size: 2.5rem;
+  }
+  
+  .theme-toggle-auth {
+    top: 15px;
+    right: 15px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .theme-toggle-auth svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .weather-emoji {
+    font-size: 1.5rem;
+    opacity: 0.08;
+  }
+}

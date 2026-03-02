@@ -1,0 +1,156 @@
+.weather-card {
+  animation: fadeInScale 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-radius: 24px !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.weather-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 100%);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Temperature Display with Gradient */
+.display-1 {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.weather-card h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.weather-card h5, .weather-card h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.detail-card p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+/* Detail Cards with Hover Effects */
+.detail-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px !important;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.detail-card:hover::before {
+  left: 100%;
+}
+
+.detail-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+  border-color: var(--accent) !important;
+}
+
+/* Favorite Button with Animation */
+.favorite-btn {
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
+  position: relative;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+
+.favorite-btn:active {
+  transform: scale(0.9);
+}
+
+.favorite-btn .text-warning {
+  filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));
+}
+
+/* Weather Icon Animation */
+.weather-card img {
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Pulse Animation for Favorite Star */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.pulse-animation {
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Icon Styling */
+.detail-card svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Badge Styling */
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .weather-card {
+    border-radius: 20px !important;
+  }
+  
+  .detail-card {
+    border-radius: 12px !important;
+  }
+  
+  .display-1 {
+    font-size: 4rem;
+  }
+}

@@ -1,0 +1,114 @@
+.map-card {
+  animation: fadeInUp 0.6s ease-out;
+  border-radius: 20px !important;
+  overflow: hidden;
+}
+
+.map-header {
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.map-header h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.map-container {
+  position: relative;
+  min-height: 500px;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.map-card .card-body {
+  min-height: 600px;
+}
+
+/* Leaflet map styling */
+.leaflet-container {
+  font-family: 'Inter', sans-serif;
+  border-radius: 0 0 20px 20px;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+  margin: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.map-popup h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--accent-solid);
+}
+
+.map-popup p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .leaflet-popup-content-wrapper {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .leaflet-popup-tip {
+  background-color: var(--bg-card);
+}
+
+/* Zoom controls styling */
+.leaflet-control-zoom a {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: var(--accent-solid) !important;
+  color: white !important;
+}
+
+/* Attribution styling */
+.leaflet-control-attribution {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.7rem;
+}
+
+[data-theme="dark"] .leaflet-control-attribution {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .leaflet-control-attribution a {
+  color: var(--accent-solid) !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .map-container {
+    height: 300px;
+  }
+  
+  .map-card {
+    border-radius: 15px !important;
+  }
+}
